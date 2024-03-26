@@ -456,6 +456,8 @@ class VisionTransformer(nn.Module):
 
 @register_model
 def vit_small_patch16_224(pretrained=False, **kwargs):
+    if 'pretrained_cfg' in kwargs: del kwargs['pretrained_cfg']
+    if 'pretrained_cfg_overlay' in kwargs: del kwargs['pretrained_cfg_overlay']
     model = VisionTransformer(
         patch_size=16,
         embed_dim=384,
@@ -471,6 +473,8 @@ def vit_small_patch16_224(pretrained=False, **kwargs):
 
 @register_model
 def vit_base_patch16_224(pretrained=False, **kwargs):
+    if 'pretrained_cfg' in kwargs: del kwargs['pretrained_cfg']
+    if 'pretrained_cfg_overlay' in kwargs: del kwargs['pretrained_cfg_overlay']
     model = VisionTransformer(
         patch_size=16,
         embed_dim=768,
@@ -486,6 +490,8 @@ def vit_base_patch16_224(pretrained=False, **kwargs):
 
 @register_model
 def vit_large_patch16_224(pretrained=False, **kwargs):
+    if 'pretrained_cfg' in kwargs: del kwargs['pretrained_cfg']
+    if 'pretrained_cfg_overlay' in kwargs: del kwargs['pretrained_cfg_overlay']
     model = VisionTransformer(
         patch_size=16,
         embed_dim=1024,
@@ -501,6 +507,8 @@ def vit_large_patch16_224(pretrained=False, **kwargs):
 
 @register_model
 def vit_huge_patch16_224(pretrained=False, **kwargs):
+    if 'pretrained_cfg' in kwargs: del kwargs['pretrained_cfg']
+    if 'pretrained_cfg_overlay' in kwargs: del kwargs['pretrained_cfg_overlay']
     model = VisionTransformer(
         patch_size=16,
         embed_dim=1280,
@@ -516,6 +524,8 @@ def vit_huge_patch16_224(pretrained=False, **kwargs):
 
 @register_model
 def vit_giant_patch14_224(pretrained=False, **kwargs):
+    if 'pretrained_cfg' in kwargs: del kwargs['pretrained_cfg']
+    if 'pretrained_cfg_overlay' in kwargs: del kwargs['pretrained_cfg_overlay']
     model = VisionTransformer(
         patch_size=14,
         embed_dim=1408,
